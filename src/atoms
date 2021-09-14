@@ -1,0 +1,72 @@
+const Title = styled.div`
+    padding-top: 16px;
+    margin-bottom: 16px;
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+`;
+<div style={{ margin: '0px 16px' }}>
+    <Title>
+        오늘 먹은 점심 값은?
+    </Title>
+</div>
+
+////////////////////////////////여기까지가 atom-Span에 해당
+
+
+<div style={{ marginBottom: 8, height: 36 }}>
+    <select
+        style={{
+            marginRight: 16,
+            height: 36,
+            width: 72,
+            border: '1px solid grey',
+            borderRadius: 8,
+            fontSize: 20,
+        }}
+        value={selectedName}
+        onChange={handleChangeName}
+    >
+        {nameList.map((name: string) => (
+            <option key={name} value={name}>
+                {name}
+            </option>
+        ))}
+    </select>
+</div>
+
+
+<div style={{ marginBottom: 8, height: 36 }}>
+    <span style={{ fontSize: 20, marginRight: 16 }}>원</span>
+    <button
+        style={{
+            height: 36,
+            width: 64,
+            border: '1px solid grey',
+            borderRadius: 8,
+            background: 'white',
+            fontSize: 20,
+        }}
+        disabled={loading}
+        onClick={handleClick}
+    >
+        입력
+    </button>
+</div>
+///////////////////////////////////////atom-Button에 해당
+
+
+<div style={{ marginBottom: 8, height: 36 }}>
+    <input
+        type='number'
+        style={{
+            width: 80,
+            border: 'none',
+            borderBottom: '1px solid grey',
+            fontSize: 20,
+        }}
+        value={value}
+        onChange={handleChangeValue}
+    />
+</div>
+////////////////////////////////////////atom-Input에 해당
